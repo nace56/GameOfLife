@@ -9,7 +9,7 @@ namespace GameOfLife
 		public override BaseCell StepForward(int x, int y, BaseCell[,] grid)
 		{
 			var count = GetNeighbors(x, y, grid).Count(c => c is OnCell);
-			if (count == 2 || count == 3)
+			if (count == 3)
 			{
 				return new OnCell();
 			}

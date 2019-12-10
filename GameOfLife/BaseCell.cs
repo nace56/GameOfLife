@@ -18,7 +18,7 @@ namespace GameOfLife
 				{
 					if (i != 0 || j != 0)
 					{
-						yield return grid[i, j];
+						yield return grid[i + x, j + y];
 					}
 				}
 			}
