@@ -23,6 +23,14 @@ namespace GameOfLife
 					Grid[i, j] = ChooseCell();
 				}
 			}
+
+			for (int i = 0; i < x; i++)
+			{
+				Grid[0, i] = new OffCell();
+				Grid[i, 0] = new OffCell();
+				Grid[x-1, i] = new OffCell();
+				Grid[i, y-1] = new OffCell();
+			}
 		}
 
 		private BaseCell ChooseCell()

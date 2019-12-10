@@ -17,7 +17,7 @@ namespace GameOfLife
 		public Form1()
 		{
 			InitializeComponent();
-			Model = new LifeModel(40, 40);
+			Model = new LifeModel(60, 60);
 		}
 
 		protected override void OnMouseClick(MouseEventArgs e)
