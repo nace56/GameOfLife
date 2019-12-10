@@ -28,8 +28,8 @@ namespace GameOfLife
 			{
 				Grid[0, i] = new OffCell();
 				Grid[i, 0] = new OffCell();
-				Grid[x-1, i] = new OffCell();
-				Grid[i, y-1] = new OffCell();
+				Grid[x - 1, i] = new OffCell();
+				Grid[i, y - 1] = new OffCell();
 			}
 		}
 
@@ -51,7 +51,7 @@ namespace GameOfLife
 			{
 				for (int j = 1; j < MaxY - 1; j++)
 				{
-					Grid[i, j] = Grid[i, j].StepForward(i, j, oldGrid);
+					Grid[i, j].StepForward(i, j, oldGrid, Grid);
 				}
 			}
 		}

@@ -6,7 +6,7 @@ namespace GameOfLife
 {
 	abstract class BaseCell
 	{
-		public abstract BaseCell StepForward(int x, int y, BaseCell[,] grid);
+		public abstract void StepForward(int x, int y, BaseCell[,] grid, BaseCell[,] nextGrid);
 
 		public abstract Color GetColor();
 

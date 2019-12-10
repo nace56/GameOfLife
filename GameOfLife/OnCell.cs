@@ -6,15 +6,13 @@ namespace GameOfLife
 {
 	class OnCell : BaseCell
 	{
-		public override BaseCell StepForward(int x, int y, BaseCell[,] grid)
+		public override void StepForward(int x, int y, BaseCell[,] oldGrid, BaseCell[,] nextGrid)
 		{
-			var count = GetNeighbors(x, y, grid).Count(c => c is OnCell);
+			var count = GetNeighbors(x, y, oldGrid).Count(c => c is OnCell);
 			if (count < 2 || count >= 4)
 			{
-				return new OffCell();
+				nextGrid[x,y] = new OffCell();
 			}
-
-			return this;
 		}
 
 		public override Color GetColor()
