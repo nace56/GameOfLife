@@ -11,12 +11,12 @@ namespace GameOfLife
 
 
             //falls
-            if (!oldGrid[x, y - 1] is Sand &&
-                !oldGrid[x, y - 1] is Ice &&
-                !oldGrid[x, y - 1] is Water) //can't go through these cells
+            if (!(oldGrid[x, y - 1] is Sand) &&
+                !(oldGrid[x, y - 1] is Ice) &&
+                !(oldGrid[x, y - 1] is Water)) //can't go through these cells
             {
-                newGrid[x, y] = new OffCell(); //turn old cell (above) off?
-                newGrid[x, y - 1] = new Water(); 
+                nextGrid[x, y] = new OffCell(); //turn old cell (above) off?
+                nextGrid[x, y - 1] = new Water(); 
             }
 
 
