@@ -16,5 +16,4 @@ namespace GameOfLife
 			return Color.FromArgb(255, 0, 255, 255);
 		}
 	}
-
 }

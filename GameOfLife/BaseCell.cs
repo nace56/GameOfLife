@@ -4,44 +4,6 @@ using System.Drawing;
 
 namespace GameOfLife
 {
-	public class Water : BaseCell
-	{
-		public override Color GetColor()
-		{
-			throw new NotImplementedException();
-		}
-
-		public override void StepForward(int x, int y, BaseCell[,] grid, BaseCell[,] nextGrid)
-		{
-			throw new NotImplementedException();
-		}
-	} // delete me
-	public class Fire : BaseCell
-	{
-		public override Color GetColor()
-		{
-			throw new NotImplementedException();
-		}
-
-		public override void StepForward(int x, int y, BaseCell[,] grid, BaseCell[,] nextGrid)
-		{
-			throw new NotImplementedException();
-		}
-	}
-
-	/*public class Ice : BaseCell
-	{
-		public override Color GetColor()
-		{
-			throw new NotImplementedException();
-		}
-
-		public override void StepForward(int x, int y, BaseCell[,] grid, BaseCell[,] nextGrid)
-		{
-			throw new NotImplementedException();
-		}
-	}*/
-
 	public abstract class BaseCell
 	{
 		public abstract void StepForward(int x, int y, BaseCell[,] grid, BaseCell[,] nextGrid);
