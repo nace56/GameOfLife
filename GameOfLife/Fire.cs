@@ -29,7 +29,7 @@ namespace GameOfLife
 
         public override Color GetColor()
         {
-            return Color.FromArgb(255, 255, 255, 255);
+            return Color.FromArgb(255, 255, 165, 0);
         }
     }
 }
