@@ -20,7 +20,7 @@ namespace GameOfLife
 			{
 				for (int j = 0; j < y; j++)
 				{
-					Grid[i, j] = ChooseCell();
+					Grid[i, j] = ChooseCell(i);
 				}
 			}
 
@@ -33,12 +33,14 @@ namespace GameOfLife
 			}
 		}
 
-		private BaseCell ChooseCell()
+		private BaseCell ChooseCell(int i)
 		{
-			Random r = new Random();
-			Type[] types = new[] { typeof(OffCell), typeof(OnCell) };//, typeof(SlowPlague) };
+			//Random r = new Random();
+			Type[] types = new[] { typeof(OffCell), typeof(OnCell), typeof(Sand), typeof(Water), typeof(SlowPlague) };
 
-			var type = types[r.Next(0, types.Length)];
+
+			//var type = types[r.Next(0, types.Length)];
+			var type = types[types.Length % i];
 
 			return (BaseCell)Activator.CreateInstance(type);
 		}
