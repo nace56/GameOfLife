@@ -36,7 +36,7 @@ namespace GameOfLife
 		private BaseCell ChooseCell()
 		{
 			Random r = new Random();
-			Type[] types = new[] { typeof(OffCell), typeof(OnCell) };
+			Type[] types = new[] { typeof(OffCell), typeof(OnCell) };//, typeof(SlowPlague) };
 
 			var type = types[r.Next(0, types.Length)];
 
