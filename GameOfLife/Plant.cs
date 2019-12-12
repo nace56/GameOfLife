@@ -12,7 +12,7 @@ namespace GameOfLife
 
 		public override Color GetColor()
 		{
-			return Color.FromArgb(124, 252, 0);
+			return Color.FromArgb(0, 252, 0);
 		}
 
 		public override void StepForward(int x, int y, BaseCell[,] oldGrid, BaseCell[,] nextGrid)
